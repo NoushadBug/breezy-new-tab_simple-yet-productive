@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Custom Search and File Converter",
+    "version": "1.0",
+    "description": "Replace new tab with a search field and file format converter.",
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/nove-logo.svg"
+    },
+    "icons": {
+        "16": "icons/nove-logo.svg",
+        "48": "icons/nove-logo.svg",
+        "128": "icons/nove-logo.svg"
+    },
+    "host_permissions": [
+        "https://*/",
+        "http://*/"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}
