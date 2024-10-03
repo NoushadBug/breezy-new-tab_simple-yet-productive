@@ -14,6 +14,36 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-#search-container, #conversion-container {
+#search-container,
+#conversion-container {
     margin: 20px 0;
+}
+
+/* Additional styles for modal overlay */
+.modal-overlay {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    z-index: 50;
+    /* Ensure it sits above other content */
+    justify-content: center;
+    /* Center modal horizontally */
+    align-items: center;
+    /* Center modal vertically */
+}
+
+.modal-active {
+    display: flex;
+    /* Show modal */
+}
+
+button {
+    background-color: transparent;
+    /* Remove background color */
 }

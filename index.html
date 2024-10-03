@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>➕ NewTab</title>
+    <link rel="icon" href="./icons/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./icons/icon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-gray-900 text-white p-8 font-sans">
+
+    <div class="max-w-4xl mx-auto">
+        <div id="categories" class="grid grid-cols-3 gap-6">
+            <!-- Dynamic content here: Cards -->
+            <div class="relative group bg-gray-800 rounded-lg overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i class='bx bx-plus text-4xl'></i> <!-- Boxicon for Add -->
+                </div>
+                <div class="text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span>Add Link</span>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+
+        <div class="mt-8">
+            <button id="addCategory" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Category</button>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modal" class="modal-overlay hidden">
+        <div class="bg-gray-800 rounded-lg p-6 w-96 mx-auto relative">
+            <span id="modal-close" class="absolute top-2 right-2 text-gray-400 cursor-pointer hover:text-white">&times;</span>
+            <h3 id="modal-title" class="text-lg font-bold mb-4"></h3>
+            <input type="text" id="modal-input" placeholder="Enter value here" class="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring focus:ring-blue-500" autofocus />
+            <input type="text" id="modal-url" placeholder="Enter link URL" class="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring focus:ring-blue-500" style="display: none;" />
+            <button id="modal-submit" class="text-white rounded py-2 px-4 hover:bg-blue-700">Submit</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
